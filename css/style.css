@@ -1,0 +1,161 @@
+:root{
+  --pink: hsl(322, 100%, 66%);
+  --very-pale-cyan: hsl(193, 100%, 96%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+}
+html{
+  font-family: 'Raleway', sans-serif;
+}
+body{
+  background-image: url(../images/bg-hero-mobile.svg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 68rem){
+  body{
+    background-image: url(../images/bg-hero-desktop.svg);
+  }
+}
+/* -------------------- COMPONENETES -------------------- */
+.btn{
+  display: inline-block;
+  border: none;
+  border-radius: 20px;
+  font-size: .6rem;
+  padding: 0.2rem 1rem;
+  font-weight: bold;
+  box-shadow: 5px 5px 16px -6px #00000028;
+  cursor: pointer;
+}
+.btn:hover{
+  opacity: .7;
+}
+@media screen and (min-width: 68rem){
+  .btn{
+    padding: 1rem 3rem;
+    font-size: 1rem;
+  }
+}
+/* -------------------- ESTILOS -------------------- */
+/* -------------------- HEADER -------------------- */
+.header{
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 68rem){
+  .header-logo{
+    max-width: 200px;
+  }
+}
+/* -------------------- MAIN SECTION -------------------- */
+.main-section{
+  background-image: linear-gradient(white 0 92%, var(--very-dark-cyan) 92% 100%);
+}
+
+/* -------------------- HERO SETION -------------------- */
+.ready-to-build > .container > .btn,
+.hero-title > .btn{
+  padding: .5rem 3rem;
+  background-color: var(--pink);
+}
+@media screen and (min-width: 68rem){
+  .hero-section > .container{
+    align-items: center;
+  }
+  .hero-title{
+    flex-basis: 90%;
+  }
+  .hero-title > .btn{
+    padding: 1rem 2rem;
+    font-size: .8rem;
+  }
+}
+/* -------------------- FEATURES -------------------- */
+.feature{
+  box-shadow: 5px 5px 16px -6px #00000028;
+  border-radius: 10px;
+}
+.feature-imagen{
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 68rem){
+  .feature > img{
+    width: 100%;
+  }
+  .feature > .container{
+    align-items: center;
+  }
+}
+/* -------------------- READY TO BUILD -------------------- */
+.ready-to-build{
+  border-radius: 20px;
+}
+.ready-to-build > .container > .btn{
+  padding: .7rem 3rem;
+  font-size: .6rem;
+}
+@media screen and (min-width: 68rem){
+  .ready-to-build{
+    width: 60%;
+  }
+  .ready-to-build > .container > .btn{
+    font-size: 1rem;
+  }
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer{
+  background-color: var(--very-dark-cyan);
+}
+.contact{
+  align-items: center;
+}
+.sociales{
+  justify-content: space-between;
+}
+.copyright{
+  font-size: .8rem;
+}
+@media screen and (min-width: 68rem){
+  .footer > .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 150px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'huddle huddle huddle'
+    'contact nav sociales'
+    '. copyright copyright';
+  }
+  .footer-imagen{
+    width: 200px;
+    grid-area: huddle;
+  }
+  .footer-contact{
+    grid-area: contact;
+  }
+  .footer-nav{
+    grid-area: nav;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer-nav > a{
+    flex-basis: 50%;
+  }
+  .sociales{
+    grid-area: sociales;
+    width: 50%;
+  }
+  .copyright{
+    grid-area: copyright;
+  }
+}
+/* -------------------- ATTRIBUTION -------------------- */
+.attribution{
+  background-color: var(--grayish-blue);
+}
+.attribution > a{
+  color: var(--very-dark-cyan)
+}
